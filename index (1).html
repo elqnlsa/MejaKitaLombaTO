@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduChamp - Platform Lomba & Try Out</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .progress-bar {
+            transition: width 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i data-feather="award" class="text-indigo-600 mr-2"></i>
+                <h1 class="text-2xl font-bold text-indigo-600">EduChamp</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium">Beranda</a>
+                <a href="#lomba" class="text-gray-700 hover:text-indigo-600 font-medium">Lomba</a>
+                <a href="#tryout" class="text-gray-700 hover:text-indigo-600 font-medium">Try Out</a>
+                <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium">Leaderboard</a>
+            </nav>
+            <button class="md:hidden">
+                <i data-feather="menu" class="text-gray-700"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Belajar Jadi Menyenangkan!</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Platform Lomba dan Try Out interaktif untuk siswa SD, SMP, dan SMA</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <a href="#lomba" class="bg-white text-indigo-600 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 card-hover">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-indigo-100 p-4 rounded-full mb-4">
+                            <i data-feather="award" class="w-12 h-12 text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Lomba</h3>
+                        <p class="text-gray-600">Ikuti berbagai lomba seru dan menantang</p>
+                    </div>
+                </a>
+                
+                <a href="#tryout" class="bg-white text-indigo-600 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 card-hover">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-indigo-100 p-4 rounded-full mb-4">
+                            <i data-feather="edit-3" class="w-12 h-12 text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Try Out</h3>
+                        <p class="text-gray-600">Latih kemampuanmu dengan soal-soal berkualitas</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lomba Section -->
+    <section id="lomba" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Pilihan Lomba</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Pilih lomba yang sesuai dengan minat dan kemampuanmu</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Lomba A -->
+                <div class="bg-indigo-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 card-hover">
+                    <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i data-feather="book" class="w-8 h-8 text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-2">Lomba A</h3>
+                    <p class="text-gray-600 text-center mb-4">Lomba Bahasa Indonesia untuk SD</p>
+                    <div class="flex justify-center space-x-3">
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">Detail</button>
+                        <button class="bg-white text-indigo-600 border border-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-50 transition">Daftar</button>
+                    </div>
+                </div>
+                
+                <!-- Lomba B -->
+                <div class="bg-pink-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 card-hover">
+                    <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i data-feather="cpu" class="w-8 h-8 text-pink-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-2">Lomba B</h3>
+                    <p class="text-gray-600 text-center mb-4">Lomba Sains untuk SMP</p>
+                    <div class="flex justify-center space-x-3">
+                        <button class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition">Detail</button>
+                        <button class="bg-white text-pink-600 border border-pink-600 px-4 py-2 rounded-lg hover:bg-pink-50 transition">Daftar</button>
+                    </div>
+                </div>
+                
+                <!-- Lomba C -->
+                <div class="bg-green-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 card-hover">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i data-feather="code" class="w-8 h-8 text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-2">Lomba C</h3>
+                    <p class="text-gray-600 text-center mb-4">Lomba Matematika untuk SMA</p>
+                    <div class="flex justify-center space-x-3">
+                        <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Detail</button>
+                        <button class="bg-white text-green-600 border border-green-600 px-4 py-2 rounded-lg hover:bg-green-50 transition">Daftar</button>
+                    </div>
+                </div>
+                
+                <!-- Lomba D -->
+                <div class="bg-yellow-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 card-hover">
+                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i data-feather="globe" class="w-8 h-8 text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-2">Lomba D</h3>
+                    <p class="text-gray-600 text-center mb-4">Lomba IPS Terpadu</p>
+                    <div class="flex justify-center space-x-3">
+                        <button class="bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700 transition">Detail</button>
+                        <button class="bg-white text-yellow-600 border border-yellow-600 px-4 py-2 rounded-lg hover:bg-yellow-50 transition">Daftar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Try Out Section -->
+    <section id="tryout" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Pilihan Try Out</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Latih kemampuanmu dengan berbagai jenis try out</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Try Out UTBK -->
+                <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="book-open" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Try Out UTBK</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- PBM -->
+                        <div class="bg-blue-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-blue-800 mb-2">PBM</h4>
+                            <p class="text-sm text-gray-600 mb-3">Penalaran Bahasa dan Matematika</p>
+                            <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Mulai</button>
+                        </div>
+                        
+                        <!-- PU -->
+                        <div class="bg-purple-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-purple-800 mb-2">PU</h4>
+                            <p class="text-sm text-gray-600 mb-3">Penalaran Umum</p>
+                            <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition">Mulai</button>
+                        </div>
+                        
+                        <!-- LBI -->
+                        <div class="bg-green-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-green-800 mb-2">LBI</h4>
+                            <p class="text-sm text-gray-600 mb-3">Literasi Bahasa Indonesia</p>
+                            <button class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">Mulai</button>
+                        </div>
+                        
+                        <!-- LBE -->
+                        <div class="bg-red-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-red-800 mb-2">LBE</h4>
+                            <p class="text-sm text-gray-600 mb-3">Literasi Bahasa Inggris</p>
+                            <button class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition">Mulai</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Try Out OSN -->
+                <div class="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-orange-100 p-3 rounded-full mr-4">
+                            <i data-feather="star" class="w-6 h-6 text-orange-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Try Out OSN</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <!-- IPA -->
+                        <div class="bg-orange-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-orange-800 mb-2">IPA</h4>
+                            <p class="text-sm text-gray-600 mb-3">Ilmu Pengetahuan Alam</p>
+                            <button class="w-full bg-orange-600 text-white py-2 rounded-lg hover:bg-orange-700 transition">Mulai</button>
+                        </div>
+                        
+                        <!-- IPS -->
+                        <div class="bg-indigo-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-indigo-800 mb-2">IPS</h4>
+                            <p class="text-sm text-gray-600 mb-3">Ilmu Pengetahuan Sosial</p>
+                            <button class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition">Mulai</button>
+                        </div>
+                        
+                        <!-- Matematika -->
+                        <div class="bg-pink-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-pink-800 mb-2">Matematika</h4>
+                            <p class="text-sm text-gray-600 mb-3">Matematika Terapan</p>
+                            <button class="w-full bg-pink-600 text-white py-2 rounded-lg hover:bg-pink-700 transition">Mulai</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leaderboard Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Peringkat Teratas</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Lihat peringkat peserta terbaik di platform EduChamp</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-gray-50 rounded-xl p-6 shadow-sm">
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                    <div class="text-center">
+                        <div class="bg-indigo-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <i data-feather="award" class="w-8 h-8 text-yellow-600"></i>
+                        </div>
+                        <h4 class="font-bold">Juara 1</h4>
+                        <p class="text-sm text-gray-600">Andi Pratama</p>
+                        <p class="text-sm font-semibold text-indigo-600">950 Poin</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="bg-indigo-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <i data-feather="award" class="w-8 h-8 text-gray-400"></i>
+                        </div>
+                        <h4 class="font-bold">Juara 2</h4>
+                        <p class="text-sm text-gray-600">Budi Santoso</p>
+                        <p class="text-sm font-semibold text-indigo-600">890 Poin</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="bg-indigo-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-2">
+                            <i data-feather="award" class="w-8 h-8 text-amber-700"></i>
+                        </div>
+                        <h4 class="font-bold">Juara 3</h4>
+                        <p class="text-sm text-gray-600">Citra Dewi</p>
+                        <p class="text-sm font-semibold text-indigo-600">850 Poin</p>
+                    </div>
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="text-left border-b">
+                                <th class="pb-3">Peringkat</th>
+                                <th class="pb-3">Nama</th>
+                                <th class="pb-3">Progress</th>
+                                <th class="pb-3">Poin</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b">
+                                <td class="py-3">4</td>
+                                <td class="py-3">Dewi Lestari</td>
+                                <td class="py-3">
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-blue-600 h-2.5 rounded-full progress-bar" style="width: 80%"></div>
+                                    </div>
+                                </td>
+                                <td class="py-3 font-semibold text-blue-600">820</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-3">5</td>
+                                <td class="py-3">Eko Prasetyo</td>
+                                <td class="py-3">
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-blue-600 h-2.5 rounded-full progress-bar" style="width: 75%"></div>
+                                    </div>
+                                </td>
+                                <td class="py-3 font-semibold text-blue-600">790</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3">6</td>
+                                <td class="py-3">Fitriani</td>
+                                <td class="py-3">
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-blue-600 h-2.5 rounded-full progress-bar" style="width: 70%"></div>
+                                    </div>
+                                </td>
+                                <td class="py-3 font-semibold text-blue-600">750</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="text-center mt-6">
+                    <button class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition">Lihat Semua</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i data-feather="award" class="text-indigo-400 mr-2"></i>
+                        <h3 class="text-xl font-bold">EduChamp</h3>
+                    </div>
+                    <p class="text-gray-400">Platform Lomba dan Try Out interaktif untuk siswa SD, SMP, dan SMA.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Menu</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Beranda</a></li>
+                        <li><a href="#lomba" class="text-gray-400 hover:text-white transition">Lomba</a></li>
+                        <li><a href="#tryout" class="text-gray-400 hover:text-white transition">Try Out</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Leaderboard</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="mail" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">hello@educhamp.id</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="phone" class="w-4 h-4 mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">+62 123 4567 890</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Sosial Media</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-indigo-600 transition">
+                            <i data-feather="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-indigo-600 transition">
+                            <i data-feather="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-indigo-600 transition">
+                            <i data-feather="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-indigo-600 transition">
+                            <i data-feather="youtube" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 EduChamp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+        
+        // Simple animation for progress bars
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>
